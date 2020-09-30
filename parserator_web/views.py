@@ -18,7 +18,6 @@ class AddressParse(APIView):
         # TODO: Flesh out this method to parse an address string using the
         # parse() method and return the parsed components to the frontend.
         try:
-            input_string = request.get_json()
             address_components, address_type = self.parse(input_string)
             if (address_components is None) or (address_type is None) or (input_string in None):
                 return print("Address is undefined")
